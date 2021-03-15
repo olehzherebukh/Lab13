@@ -15,7 +15,7 @@ class GoodsOfPharmacy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     price_of_good = db.Column(db.String(120), unique=True)
     nameOfGood = db.Column(db.String(120), unique=True)
-    qualityOfGood = db.Column(db.String(120), unique=True)
+    quality_of_good = db.Column(db.String(120), unique=True)
     amountOfCustomersPerDay = db.Column(db.String(120), unique=True)
     typeOfGood = db.Column(db.String(120), unique=True)
 
