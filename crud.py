@@ -46,7 +46,7 @@ def add_good():
     qualityOfGood = request.json['qualityOfGood']
     amountOfCustomersPerDay = request.json['amountOfCustomersPerDay']
     typeOfGood = request.json['typeOfGood']
-    
+
     new_good = GoodsOfPharmacy(priceOfGood, nameOfGood, qualityOfGood, amountOfCustomersPerDay, typeOfGood)
 
     db.session.add(new_good)
