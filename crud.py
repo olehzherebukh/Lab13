@@ -13,7 +13,7 @@ ma = Marshmallow(app)
 
 class GoodsOfPharmacy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    priceOfGood = db.Column(db.String(120), unique=True)
+    price_of_good = db.Column(db.String(120), unique=True)
     nameOfGood = db.Column(db.String(120), unique=True)
     qualityOfGood = db.Column(db.String(120), unique=True)
     amountOfCustomersPerDay = db.Column(db.String(120), unique=True)
@@ -21,7 +21,7 @@ class GoodsOfPharmacy(db.Model):
 
     def __init__(self, priceOfGood, nameOfGood, qualityOfGood,
                  amountOfCustomersPerDay, typeOfGood):
-        self.priceOfGood = priceOfGood
+        self.price_of_good = priceOfGood
         self.nameOfGood = nameOfGood
         self.qualityOfGood = qualityOfGood
         self.amountOfCustomersPerDay = amountOfCustomersPerDay
@@ -80,7 +80,7 @@ def good_update(id):
     amountOfCustomersPerDay = request.json['amountOfCustomersPerDay']
     typeOfGood = request.json['typeOfGood']
 
-    good.priceOfGood = priceOfGood
+    good.price_of_good = priceOfGood
     good.nameOfGood = nameOfGood
     good.qualityOfGood = qualityOfGood
     good.amountOfCustomersPerDay = amountOfCustomersPerDay
